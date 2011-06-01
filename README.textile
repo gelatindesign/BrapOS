@@ -1,6 +1,6 @@
-----------------------------------------------------------------	
-Revision 1
-------
+h1. README
+
+h2. Revision 1
 	>open | >goto
 		{path}
 		
@@ -51,9 +51,7 @@ Revision 1
 	>describe
 		[=system|{filepath}]
 		
-----------------------------------------------------------------
-Revision 2
-------
+h2. Revision 2
 	No 'list' command
 	Files are not stored in folders, instead tags are applied to files
 	'find' command then searches against tags and file names with additional filter parameters
@@ -71,12 +69,9 @@ Revision 2
 				 >describe $brapc
 				 	would output 'search | 'brap *.c' | 4 results
 				 >describe $brapc -full
-				 	would output the same as just doing the search	
-	>
+				 	would output the same as just doing the search
 	
-----------------------------------------------------------------
-Revision 3
-------
+h2. Revision 3
 	Don't use variables
 	Pipe programs into their calling parent programs
 	Core program is always final call
