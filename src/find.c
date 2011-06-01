@@ -14,23 +14,6 @@ const char _keywords[_keywords_size][10] = {"help", "describe"};*/
 #include "core.h"
 #include "error.h"
 
-/*void help() {
-	printf("\nsearch help\n");
-	printf("\t{string} [[*]{string}[*]] [${variable}]\n");
-	printf("\tparam1 is a comma-seperated list of search terms\n");
-	printf("\tparam2 is an optional literal file name search with optional wildcard prepend and append\n");
-	printf("\tparam3 is an optional variable to save the results into; for use with other functions\n");
-	printf("\te.g. >search brap,jiggawot *.txt\n");
-	printf("\t\twould find any .txt file with a tag of brap and jiggawot\n");
-	printf("\te.g. >search (brap|jiggawot),hello *.c\n");
-	printf("\t\twould find any .c file with a tag of hello and one of either brap or jiggawot\n");
-	printf("\te.g. >search brap *.c $brapc\n");
-	printf("\t\t>describe $brapc\n");
-	printf("\t\t\twould output 'search | 'brap *.c' | 4 results\n");
-	printf("\t\t>describe $brapc -full\n");
-	printf("\t\t\twould output the same as just doing the search\n");
-}*/
-
 void describe() {
 	
 }
