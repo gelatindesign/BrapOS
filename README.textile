@@ -9,3 +9,27 @@ h2. Primary Objectives & Direction
 * Window-less applications
 * Full keyboard control
 * Not ugly
+
+h2. Items of note completed
+
+_none... best get cracking_
+
+h2. Items of note to do
+
+* Kernal
+** loader.s
+** kernal.c
+** linker.ld
+* Core
+** Program piping
+** Core utilities
+*** find
+*** schedule
+*** user
+*** describe
+* Memory manager
+** malloc()
+*** first fit / best fit
+*** binary tree
+** realloc()
+** free()
