@@ -1,106 +1,11 @@
-----------------------------------------------------------------		
-Revision 1
-------
-	>open | >goto
-		{path}
-		
-	>creates
-		file
-			{name}
-		folder
-			{name}
-	
-	>copy
-		{filepath} {destination path} [-full|-depth=(0-9)+]
-		
-	>move
-		{filepath} {destination path} [-full|-depth=(0-9)+]
-		
-	>delete
-		file
-			{filepath}
-		folder
-			{path}
-		
-	>edit
-		{filepath} [-code|-rich|-plain]
-		link {type (code|rich|plain)} {extension}
-		
-	>search
-		{string} {path} [-full|-depth=(0-9)+] [-pattern] [-filepath|-filename|-fileline]
-		
-	>run
-		{filepath}
-	
-	>schedule
-		{frequency|date} {filepath}
-		
-	>user
-		list
-		create
-			{username}
-			{password}
-		delete
-			{username}
-			{y|n}
-		grant
-			{username} [all|exclude {app,}|{app,}]
-		revoke
-			{username} [all|exclude {app,}|{app,}]
-		
-	>describe
-		[=system|{filepath}]
-		
-----------------------------------------------------------------
-Revision 2
-------
-	No 'list' command
-	Files are not stored in folders, instead tags are applied to files
-	'find' command then searches against tags and file names with additional filter parameters
-	
-	>find
-		{string} [[*]{string}[*]] [${variable}]
-			param1 is a comma-seperated list of search terms
-			param2 is an optional literal file name search with optional wildcard prepend and append
-			param3 is an optional variable to save the results into for use with other functions
-			e.g. >search brap,jiggawot *.txt
-				would find any .txt file with a tag of brap and jiggawot
-			e.g. >search (brap|jiggawot),hello *.c
-				would find any .c file with a tag of hello and one of either brap or jiggawot
-			e.g. >search brap *.c $brapc
-				 >describe $brapc
-				 	would output 'search | 'brap *.c' | 4 results
-				 >describe $brapc -full
-				 	would output the same as just doing the search	
-	>
-	
-----------------------------------------------------------------
-Revision 3
-------
-	Don't use variables
-	Pipe programs into their calling parent programs
-	Core program is always final call
-	e.g.
-		>schedule hour backup helloworld.c
-			start
-				core opened
-					schedule opened
-						write command "backup helloworld.c"
-						set rate to every hour
-					schedule executed
-				core executed
-			end
-			- schedule waits for the child to validate but not execute
-			
-		>describe search brap,jiggawot
-			start
-				core opened
-					describe opened
-						search opened
-							format parameters
-						search executed
-						retrieve search meta
-					describe executed
-				core executed
-			end
-			- describe waits for the child to validate & execute before continuing
+h1. BrapOS Readme
+
+*Working to version _Akon_*
+
+h2. Primary Objectives & Direction
+
+* User-friendly, quick and obivous terminal programs & interface
+* Search based file system with no folders/paths
+* Window-less applications
+* Full keyboard control
+* Not ugly
