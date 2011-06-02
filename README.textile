@@ -1,6 +1,7 @@
 h1. BrapOS Readme
 
 *Working to version _Akon_*
+* Kernal
 
 h2. Primary Objectives & Direction
 
